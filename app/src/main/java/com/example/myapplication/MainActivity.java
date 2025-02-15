@@ -1,59 +1,39 @@
-// MainActivity.java
 package com.example.myapplication;
 
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mainText;
-    private Button mainBtn;
-    private EditText clientNameInput;
-    private Spinner serviceTypeSpinner;
-    private Button saveBtn;
-    private long score = 0;
+
+    private Button buttonBookConsultation;
+    private Button buttonMyRequests;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Инициализация элементов
-        mainText = findViewById(R.id.mainTxt);
-        mainBtn = findViewById(R.id.main_btn);
-        clientNameInput = findViewById(R.id.client_name_input);
-        serviceTypeSpinner = findViewById(R.id.service_type_spinner);
-        saveBtn = findViewById(R.id.save_btn);
+        buttonBookConsultation = findViewById(R.id.button_book_consultation);
+        buttonMyRequests = findViewById(R.id.button_my_requests);
 
-        // Настройка Spinner (выпадающего списка)
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.service_types, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        serviceTypeSpinner.setAdapter(adapter);
-
-        // Обработчик кнопки подсчета кликов
-        mainBtn.setOnClickListener(new View.OnClickListener() {
+        buttonBookConsultation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               score++;
-                String s = "Кликов: " + score;
-                mainText.setText(s);
+                // Переход на экран записи на консультацию
+                Intent intent = new Intent(MainActivity.this, BookConsultationActivity.class);
+                startActivity(intent);
             }
         });
 
-        // Обработчик кнопки сохранения
-        saveBtn.setOnClickListener(new View.OnClickListener() {
+        buttonMyRequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String clientName = clientNameInput.getText().toString();
-                String selectedService = serviceTypeSpinner.getSelectedItem().toString();
-
-                if (clientName.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Введите имя клиента", Toast.LENGTH_SHORT).show();
-                } else {
-                    String message = "Клиент: " + clientName + "\nУслуга: " + selectedService;
-                    Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-                }
+                // Переход на экран моих запросов
+                Intent intent = new Intent(MainActivity.this, MyRequestsActivity.class);
+                startActivity(intent);
             }
         });
     }

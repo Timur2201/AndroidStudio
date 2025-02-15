@@ -1,60 +1,50 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#FFFFFF"
-    android:padding="16dp">
+    android:background="@color/colorWhite">
 
-    <TextView
-        android:id="@+id/helloText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Юридическое приложение"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Поле ввода имени клиента -->
-    <EditText
-        android:id="@+id/client_name_input"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите имя клиента"
-        android:layout_marginBottom="16dp"
-        android:padding="8dp"
-        android:background="@android:drawable/editbox_background" />
+        android:padding="16dp">
 
-    <!-- Выпадающий список типа услуги -->
-    <Spinner
-        android:id="@+id/service_type_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать в Информационную систему Адвокат"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
 
-    <!-- Кнопка сохранения -->
-    <Button
-        android:id="@+id/save_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сохранить"
-        android:layout_marginBottom="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Опыт и профессионализм наших юристов помогут вам во всех юридических вопросах."
+            android:textSize="16sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
 
-    <!-- Счетчик кликов -->
-    <TextView
-        android:id="@+id/mainTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Кликов: 0"
-        android:textSize="24sp"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/button_book_consultation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Записаться на консультацию"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="16dp"/>
 
-    <!-- Кнопка -->
-    <Button
-        android:id="@+id/main_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click Me" />
-</LinearLayout>
+        <Button
+            android:id="@+id/button_my_requests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мои запросы"
+            android:backgroundTint="@color/colorGray"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
