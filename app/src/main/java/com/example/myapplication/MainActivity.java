@@ -1,5 +1,4 @@
 package com.example.myapplication;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         buttonBookConsultation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Переход на экран записи на консультацию
                 Intent intent = new Intent(MainActivity.this, BookConsultationActivity.class);
                 startActivity(intent);
             }
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         buttonMyRequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Переход на экран моих запросов
                 Intent intent = new Intent(MainActivity.this, MyRequestsActivity.class);
                 startActivity(intent);
             }

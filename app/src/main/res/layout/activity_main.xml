@@ -2,49 +2,66 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@color/colorWhite">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_vesi"
+             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Добро пожаловать в Информационную систему Адвокат"
+            android:text="Юридическое приложение"
             android:textSize="24sp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="Добро пожаловать в информационную систему Адвокат"
             android:textColor="@color/colorPrimary"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"/>
+            android:textSize="24sp" />
+
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="16dp"
             android:text="Опыт и профессионализм наших юристов помогут вам во всех юридических вопросах."
-            android:textSize="16sp"
             android:textColor="@color/colorTextPrimary"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"/>
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_book_consultation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Записаться на консультацию"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp"/>
+            android:text="Записаться на консультацию"
+            android:textColor="@color/colorWhite" />
 
         <Button
             android:id="@+id/button_my_requests"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Мои запросы"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="@color/colorGray"
-            android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp"/>
+            android:text="Мои запросы"
+            android:textColor="@color/colorWhite" />
 
     </LinearLayout>
 </ScrollView>
