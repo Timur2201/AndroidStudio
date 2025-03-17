@@ -45,4 +45,14 @@
         android:backgroundTint="@color/colorPrimary"
         android:text="Отправить"
         android:textColor="@color/colorWhite" />
+
+    <!-- Кнопка для возврата -->
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вернуться назад"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

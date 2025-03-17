@@ -2,66 +2,77 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@color/colorWhite">
+    android:background="@color/colorWhite"
+    android:padding="16dp">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <ImageView
-            android:id="@+id/logoImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/logo_vesi"
-             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Юридическое приложение"
-            android:textSize="24sp"
-            android:layout_marginTop="16dp"/>
+
+        <!-- Приветственное сообщение -->
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="16dp"
+            android:paddingBottom="8dp"
             android:text="Добро пожаловать в информационную систему Адвокат"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-
+        <!-- Описание -->
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="16dp"
+            android:paddingBottom="24dp"
             android:text="Опыт и профессионализм наших юристов помогут вам во всех юридических вопросах."
             android:textColor="@color/colorTextPrimary"
             android:textSize="16sp" />
 
+        <!-- Кнопка записи на консультацию -->
         <Button
             android:id="@+id/button_book_consultation"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="Записаться на консультацию"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
 
+        <!-- Кнопка мои запросы -->
         <Button
             android:id="@+id/button_my_requests"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/colorGray"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="Мои запросы"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/button_context_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Контекстное меню"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/button_show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Показать текущее время"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/button_show_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Показать текущую дату"
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 </ScrollView>
